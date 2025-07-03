@@ -7,9 +7,9 @@ app.set('port', process.env.PORT || 3000)
 
 console.log(__dirname)
 console.log(path.join(__dirname, 'public'))
+
 app.get('/', (req, res) => {
-   // html을 response
-   res.sendFile(path.join(__dirname, '/submit.html'))
+   res.send('홈페이지')
 })
 
 app.use('/image', express.static(path.join(__dirname, 'public')))
